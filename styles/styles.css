@@ -532,9 +532,11 @@ select {
     line-height: 28px;
 }
 
-.pormo-image-absolute img {
-    height: 600px;
-    width: 100%;
+.promotion-image {
+    position: absolute;
+    bottom: -23%;
+    left: 60%;
+    rotate: 12.21deg;
 }
 
 .promo-content {
@@ -543,8 +545,59 @@ select {
     position: relative;
 }
 
-.promo-content-image {
-    background: transparent;
+/* test */
+.info-left {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.circle {
+    background: #22c55e;
+    color: white;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.info-item p {
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.highlight {
+    color: #1DB469;
+}
+
+.info-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pill {
+    background: #1DB469;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 22px;
+    width: 231px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#pill-btn {
+    width: 160px;
 }
 
 /* update cart styles */
