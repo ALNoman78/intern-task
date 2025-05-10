@@ -31,7 +31,7 @@
                 <li><a href="#">Science</a></li>
                 <li><a href="#">Results</a></li>
             </ul>
-            <img src="./asstes/loho.png" alt="">
+            <img class="hidden" src="./asstes/loho.png" alt="">
             <div class="nav-right">
                 <select>
                     <option>ENG</option>
@@ -72,244 +72,199 @@
             </div>
         </div>
         <div class="drawer-overlay" id="drawerOverlay" onclick="toggleCartDrawer()"></div>
-        <!-- <header>
-        <nav class="navbar">
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Science</a></li>
-                <li><a href="#">Results</a></li>
-            </ul>
-            <div class="nav-right">
-                <select>
-                    <option>ENG</option>
-                </select>
-                <select>
-                    <option>USD</option>
-                </select>
-                <div class="cart" onclick="toggleCartDrawer()">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Cart" />
-                    <span class="cart-count" id="cartCount">0</span>
+    </header>
+    <main>
+        <!-- MAIN SECTION -->
+        <div class="container">
+            <div class="left">
+                <img src="./asstes/CRV_9601 2.png" class="main-image" id="main-img" alt="Main" />
+                <div class="thumbnails">
+                    <img src="./asstes/DSC05696 1.png" onclick="changeImage(this)" />
+                    <img src="./asstes/DSC01882 1.png" onclick="changeImage(this)" />
+                    <img src="./asstes/dog-device-11_1024x1024.jpg 1.png" onclick="changeImage(this)" />
+                    <img src="./asstes/sd-3-7_480x480.jpg.png" onclick="changeImage(this)" />
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="badge">Best Seller</div>
+                <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p id="star-color">4.9
+                        <span id="reviews-start">(1,021 reviews)</span>
+                    </p>
+                </div>
+                <div class="title">Helio Pet Device™</div>
+                <div class="review">
+                    <img src="./asstes/Ellipse 843.png" alt="">
+                    <p>
+                        ““We are BOTH so THANKFUL! I purchased this for my 12 year old Lab mix as he's got mobility
+                        issues
+                        with the back legs. It's been 3 weeks and already a difference!””
+                    </p>
                 </div>
 
-            </div>
+                <ul class="features">
+                    <li>✔ Reduce aches & pains with 5-minute sessions.</li>
+                    <li>✔ Cold Laser Therapy helps with Pain, Inflammation & more.</li>
+                    <li>✔ Professional Grade LLLT with 5 Laser Diodes.</li>
+                </ul>
 
-        </nav>
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Science</a></li>
-            <li><a href="#">Results</a></li>
-        </ul>
-         CART DRAWER 
-        <div class="cart-drawer" id="cartDrawer">
-            <div class="drawer-header">
-                <h3>Your Cart</h3>
-                <button class="close-drawer" onclick="toggleCartDrawer()">×</button>
-            </div>
-            <div class="drawer-content" id="drawerContent">
-               Cart items will appear here 
-            </div>
-            <div class="drawer-footer">
-                <p>Total: $<span id="cartTotal">0.00</span></p>
-                <button class="checkout-btn">Checkout</button>
+                <div class="price">
+                    <del>$369.00</del> <span class="current-price">$<span id="price">249.00</span></span>
+                    <div class="cart-controls-first">
+                        <button onclick="updateQty(-1)">-</button>
+                        <span id="qty">1</span>
+                        <button onclick="updateQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="btn-cart">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="cart-controls">
+                        <button onclick="updateQty(-1)">-</button>
+                        <span id="qty">1</span>
+                        <button onclick="updateQty(1)">+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./asstes/Group 1171275423.png" alt="">
+                </div>
+
+                <div class="info">
+                    <p>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span class="pink">30 day money back <span id="info-p">guarantee</span>
+                        </span>
+                    </p>
+                    <p><i class="fa-solid fa-truck"></i> <span class="blue">Expected <span id="blue-2">delivery in
+                                2–4</span> business days</span></p>
+                </div>
             </div>
         </div>
-        <div class="drawer-overlay" id="drawerOverlay" onclick="toggleCartDrawer()"></div>
-    </header> -->
-        <main>
-            <!-- MAIN SECTION -->
-            <div class="container">
-                <div class="left">
-                    <img src="./asstes/CRV_9601 2.png" class="main-image" id="main-img" alt="Main" />
-                    <div class="thumbnails">
-                        <img src="./asstes/DSC05696 1.png" onclick="changeImage(this)" />
-                        <img src="./asstes/DSC01882 1.png" onclick="changeImage(this)" />
-                        <img src="./asstes/dog-device-11_1024x1024.jpg 1.png" onclick="changeImage(this)" />
-                        <img src="./asstes/sd-3-7_480x480.jpg.png" onclick="changeImage(this)" />
-                    </div>
+        <!-- promotion section -->
+        <section class="promotion-container">
+            <div class="promo-content">
+                <div class="promo-image flex">
+                    <img src="./asstes//Frame 1171276111.png" alt="">
                 </div>
+            </div>
 
-                <div class="right">
-                    <div class="badge">Best Seller</div>
-                    <div class="stars flex">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <p id="star-color">4.9
-                            <span id="reviews-start">(1,021 reviews)</span>
-                        </p>
-                    </div>
-                    <div class="title">Helio Pet Device™</div>
-                    <div class="review">
-                        <img src="./asstes/Ellipse 843.png" alt="">
-                        <p>
-                            ““We are BOTH so THANKFUL! I purchased this for my 12 year old Lab mix as he's got mobility
-                            issues
-                            with the back legs. It's been 3 weeks and already a difference!””
-                        </p>
-                    </div>
-
-                    <ul class="features">
-                        <li>✔ Reduce aches & pains with 5-minute sessions.</li>
-                        <li>✔ Cold Laser Therapy helps with Pain, Inflammation & more.</li>
-                        <li>✔ Professional Grade LLLT with 5 Laser Diodes.</li>
-                    </ul>
-
-                    <div class="price">
-                        <del>$369.00</del> <span class="current-price">$<span id="price">249.00</span></span>
-                        <div class="cart-controls-first">
-                            <button onclick="updateQty(-1)">-</button>
-                            <span id="qty">1</span>
-                            <button onclick="updateQty(1)">+</button>
+            <div class="pormo-image-absolute">
+                <div class="promo-text">
+                    <h3>Professional Grade, Patented Design.</h3>
+                    <p>It’s required to have a <span id="green">strong enough output</span> power of 3-10 Joules per
+                        cm2
+                        with correct
+                        wavelengths
+                        (660nm + 850nm).</p>
+                    <div class="info-left">
+                        <div class="info-item">
+                            <div class="circle">1</div>
+                            <p>
+                                The treatment head is <strong>340% bigger</strong> so it
+                                <strong>can finish a treatment in <span class="highlight">3 minutes</span></strong>,
+                                vs
+                                10–20 minutes.
+                            </p>
                         </div>
-                    </div>
-
-                    <div class="btn-cart">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <div class="cart-controls">
-                            <button onclick="updateQty(-1)">-</button>
-                            <span id="qty">1</span>
-                            <button onclick="updateQty(1)">+</button>
+                        <div class="info-item">
+                            <div class="circle">2</div>
+                            <p>
+                                Has <span class="highlight"><strong>3 Modes of Power</strong></span> to accommodate
+                                to
+                                any
+                                area.
+                                It also uses wavelengths 660nm and 850nm.
+                            </p>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="./asstes/Group 1171275423.png" alt="">
-                    </div>
-
-                    <div class="info">
-                        <p>
-                            <i class="fa-solid fa-shield-halved"></i>
-                            <span class="pink">30 day money back <span id="info-p">guarantee</span>
-                            </span>
-                        </p>
-                        <p><i class="fa-solid fa-truck"></i> <span class="blue">Expected <span id="blue-2">delivery in
-                                    2–4</span> business days</span></p>
                     </div>
                 </div>
             </div>
-            <!-- promotion section -->
-            <section class="promotion-container">
-                <div class="promo-content">
-                    <div class="promo-image flex">
-                        <img src="./asstes//Frame 1171276111.png" alt="">
+            <div class="promotion-image">
+                <!-- Right Pill Buttons -->
+                <img src="./asstes/12-removebg-preview.png" alt="">
+            </div>
+        </section>
+
+        <div class="info-right">
+            <span class="pill">800% More Power</span>
+            <span id="pill-btn" class="pill">3 Minutes</span>
+        </div>
+
+    </main>
+    <!-- footer section -->
+    <footer>
+        <section class="review-section">
+            <h1 class="title-2">Verified Reviews.</h1>
+            <div class="rating-summary">
+                <div class="rating-score">
+                    <div class="flex star-icon">
+                        <span class="score">4.8</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p>Based on 480 Reviews</p>
+                </div>
+                <div class="rating-distribution">
+                    <div class="bar"><span>★★★★★</span>
+                        <div class="progress" style="width: 85%"></div><span class="count">(427)</span>
+                    </div>
+                    <div class="bar"><span>★★★★☆</span>
+                        <div class="progress" style="width: 7%"></div><span class="count">(35)</span>
+                    </div>
+                    <div class="bar"><span>★★★☆☆</span>
+                        <div class="progress" style="width: 2%"></div><span class="count">(9)</span>
+                    </div>
+                    <div class="bar"><span>★★☆☆☆</span>
+                        <div class="progress" style="width: 1%"></div><span class="count">(3)</span>
+                    </div>
+                    <div class="bar"><span>★☆☆☆☆</span>
+                        <div class="progress" style="width: 1.5%"></div><span class="count">(6)</span>
                     </div>
                 </div>
-
-                <div class="pormo-image-absolute">
-                    <div class="promo-text">
-                        <h3>Professional Grade, Patented Design.</h3>
-                        <p>It’s required to have a <span id="green">strong enough output</span> power of 3-10 Joules per
-                            cm2
-                            with correct
-                            wavelengths
-                            (660nm + 850nm).</p>
-                        <div class="info-left">
-                            <div class="info-item">
-                                <div class="circle">1</div>
-                                <p>
-                                    The treatment head is <strong>340% bigger</strong> so it
-                                    <strong>can finish a treatment in <span class="highlight">3 minutes</span></strong>,
-                                    vs
-                                    10–20 minutes.
-                                </p>
-                            </div>
-                            <div class="info-item">
-                                <div class="circle">2</div>
-                                <p>
-                                    Has <span class="highlight"><strong>3 Modes of Power</strong></span> to accommodate
-                                    to
-                                    any
-                                    area.
-                                    It also uses wavelengths 660nm and 850nm.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="review-images">
+                    <img src="https://m.media-amazon.com/images/I/61AbObfmlIL._AC_SX679_.jpg" />
+                    <img src="https://m.media-amazon.com/images/I/61jO4GM71hL.__AC_SX300_SY300_QL70_FMwebp_.jpg" />
+                    <img src="https://m.media-amazon.com/images/I/71GmLK9-xcL._AC_SX679_.jpg" />
+                    <img
+                        src="https://img.drz.lazcdn.com/static/bd/p/eb843d4249b0da707d8695719f4aab87.jpg_720x720q80.jpg_.webp" />
+                    <img
+                        src="https://img.drz.lazcdn.com/static/bd/p/f791cb5ce8920e4a2fa08ac199e2eeef.jpg_720x720q80.jpg_.webp" />
+                    <img
+                        src="https://img.drz.lazcdn.com/static/bd/p/6cc401e69921d72a0ad8210ec950451d.jpg_720x720q80.jpg_.webp" />
+                    <img src="https://m.media-amazon.com/images/I/71G8Jl3zssL._AC_SX679_.jpg" />
+                    <img src="https://m.media-amazon.com/images/I/71ygRqHoa9L._AC_SX679_.jpg" />
                 </div>
-                <div class="promotion-image">
-                    <!-- Right Pill Buttons -->
-                    <img src="./asstes/12-removebg-preview.png" alt="">
-                </div>
-            </section>
-
-            <div class="info-right">
-                <span class="pill">800% More Power</span>
-                <span id="pill-btn" class="pill">3 Minutes</span>
             </div>
 
-        </main>
-        <!-- footer section -->
-        <footer>
-            <section class="review-section">
-                <h1 class="title-2">Verified Reviews.</h1>
-                <div class="rating-summary">
-                    <div class="rating-score">
-                        <div class="flex star-icon">
-                            <span class="score">4.8</span>
-                            <div class="stars">★★★★★</div>
-                        </div>
-                        <p>Based on 480 Reviews</p>
-                    </div>
-                    <div class="rating-distribution">
-                        <div class="bar"><span>★★★★★</span>
-                            <div class="progress" style="width: 85%"></div><span class="count">(427)</span>
-                        </div>
-                        <div class="bar"><span>★★★★☆</span>
-                            <div class="progress" style="width: 7%"></div><span class="count">(35)</span>
-                        </div>
-                        <div class="bar"><span>★★★☆☆</span>
-                            <div class="progress" style="width: 2%"></div><span class="count">(9)</span>
-                        </div>
-                        <div class="bar"><span>★★☆☆☆</span>
-                            <div class="progress" style="width: 1%"></div><span class="count">(3)</span>
-                        </div>
-                        <div class="bar"><span>★☆☆☆☆</span>
-                            <div class="progress" style="width: 1.5%"></div><span class="count">(6)</span>
+            <div class="review-list">
+                <h3>Reviews <span class="review-count">480</span></h3>
+                <div class="review-item">
+                    <div class="reviewer-info">
+                        <div class="avatar">RC</div>
+                        <div>
+                            <strong>Rizalinda C.</strong> <span class="verified">Verified Buyer</span><br />
+                            <span class="location">United States</span>
                         </div>
                     </div>
-                    <div class="review-images">
-                        <img src="https://m.media-amazon.com/images/I/61AbObfmlIL._AC_SX679_.jpg" />
-                        <img src="https://m.media-amazon.com/images/I/61jO4GM71hL.__AC_SX300_SY300_QL70_FMwebp_.jpg" />
-                        <img src="https://m.media-amazon.com/images/I/71GmLK9-xcL._AC_SX679_.jpg" />
-                        <img
-                            src="https://img.drz.lazcdn.com/static/bd/p/eb843d4249b0da707d8695719f4aab87.jpg_720x720q80.jpg_.webp" />
-                        <img
-                            src="https://img.drz.lazcdn.com/static/bd/p/f791cb5ce8920e4a2fa08ac199e2eeef.jpg_720x720q80.jpg_.webp" />
-                        <img
-                            src="https://img.drz.lazcdn.com/static/bd/p/6cc401e69921d72a0ad8210ec950451d.jpg_720x720q80.jpg_.webp" />
-                        <img src="https://m.media-amazon.com/images/I/71G8Jl3zssL._AC_SX679_.jpg" />
-                        <img src="https://m.media-amazon.com/images/I/71ygRqHoa9L._AC_SX679_.jpg" />
+                    <div class="review-text">
+                        <div class="stars">★★★★★</div>
+                        <strong>Excellent product</strong>
+                        <p>It works for me and my hubby and my 23 year old chihuahua</p>
+                        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTMKdYF2a5d0o7KEpTj8hDLq73XyuRQNGY1y3Wxq-4B_NkDVA34"
+                            class="review-photo" />
                     </div>
                 </div>
-
-                <div class="review-list">
-                    <h3>Reviews <span class="review-count">480</span></h3>
-                    <div class="review-item">
-                        <div class="reviewer-info">
-                            <div class="avatar">RC</div>
-                            <div>
-                                <strong>Rizalinda C.</strong> <span class="verified">Verified Buyer</span><br />
-                                <span class="location">United States</span>
-                            </div>
-                        </div>
-                        <div class="review-text">
-                            <div class="stars">★★★★★</div>
-                            <strong>Excellent product</strong>
-                            <p>It works for me and my hubby and my 23 year old chihuahua</p>
-                            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTMKdYF2a5d0o7KEpTj8hDLq73XyuRQNGY1y3Wxq-4B_NkDVA34"
-                                class="review-photo" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </footer>
+            </div>
+        </section>
+    </footer>
 
 
-        <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
