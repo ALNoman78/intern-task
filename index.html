@@ -133,7 +133,16 @@
 
                 <div class="right">
                     <div class="badge">Best Seller</div>
-                    <div class="stars">⭐️⭐️⭐️⭐️⭐️ 4.9 (1,021 reviews)</div>
+                    <div class="stars flex">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p id="star-color">4.9
+                            <span id="reviews-start">(1,021 reviews)</span>
+                        </p>
+                    </div>
                     <div class="title">Helio Pet Device™</div>
                     <div class="review">
                         <img src="./asstes/Ellipse 843.png" alt="">
@@ -152,6 +161,11 @@
 
                     <div class="price">
                         <del>$369.00</del> <span class="current-price">$<span id="price">249.00</span></span>
+                        <div class="cart-controls-first">
+                            <button onclick="updateQty(-1)">-</button>
+                            <span id="qty">1</span>
+                            <button onclick="updateQty(1)">+</button>
+                        </div>
                     </div>
 
                     <div class="btn-cart">

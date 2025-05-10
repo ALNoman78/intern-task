@@ -122,12 +122,19 @@ nav {
     min-width: 300px;
 }
 
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .main-image {
     width: 100%;
 }
 
 .thumbnails {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 10px;
     justify-content: space-evenly;
@@ -165,12 +172,13 @@ nav {
     margin-bottom: 10px;
     line-height: 60px;
     margin: 14px 0;
+    color: #141B4D;
 }
 
 .review {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background: hsla(240, 18%, 96%, 0.659);
-    padding: 20px;
+    padding: 15px;
     width: 440px;
 }
 
@@ -195,7 +203,7 @@ nav {
 .price {
     font-size: 24px;
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .price del {
@@ -222,7 +230,8 @@ button {
     font-family: Outfit;
 }
 
-.cart-controls button {
+.cart-controls button,
+.cart-controls-first button {
     font-size: 18px;
     cursor: pointer;
     width: 30px;
@@ -239,7 +248,7 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 6px;
-    margin-top: 28px;
+    margin-top: 12px;
 }
 
 .btn-cart {
@@ -249,7 +258,7 @@ button {
 }
 
 .card {
-    margin: 20px 0;
+    margin: 14px 0;
 }
 
 .info {
@@ -412,8 +421,16 @@ select {
 }
 
 .stars {
-    color: #ffb400;
-    font-size: 26px;
+    color: #FFB525;
+    font-size: 16px;
+}
+
+#star-color {
+    color: #141B4D;
+}
+
+#reviews-start {
+    color: #3F474B;
 }
 
 .rating-distribution {
@@ -520,6 +537,7 @@ select {
 .flex {
     display: flex;
     align-content: center;
+    gap: 6px;
 }
 
 /* promotion section styles */
@@ -752,8 +770,12 @@ select {
     display: block;
 }
 
+.cart-controls-first {
+    display: none;
+}
+
 /* Responsive Rules */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .navbar .nav-links {
         display: none;
     }
@@ -764,5 +786,102 @@ select {
 
     .nav-right select {
         font-size: 14px;
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 0;
+    }
+
+    .left {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding: 8px;
+    }
+
+    .review {
+        width: 100%;
+        padding: 0;
+    }
+
+    .promo-text {
+        padding: 0;
+    }
+
+    .thumbnails img {
+        width: 65px;
+    }
+
+    header,
+    .container,
+    .review-section,
+    footer {
+        width: 100%;
+    }
+
+    .btn-cart {
+        flex-direction: column-reverse;
+    }
+
+    .promotion-container,
+    .info-right,
+    .nav-right>select,
+    .title-2,
+    .price>del {
+        display: none;
+    }
+
+    .navbar,
+    .review-section {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .review {
+        background: transparent;
+    }
+
+    .right {
+        padding: 20px;
+    }
+
+    .features {
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    .cart-controls {
+        display: none;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .cart-controls-first {
+        display: flex;
+        gap: 14px;
+    }
+
+    .btn-cart {
+        align-items: normal;
+    }
+
+    .add-to-cart {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .main-image {
+        width: 70%;
+        object-fit: cover;
+    }
+    footer{
+        padding: 10px;
     }
 }
