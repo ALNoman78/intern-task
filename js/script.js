@@ -13,67 +13,6 @@ function changeImage(thumb) {
   main.src = thumb.src;
 }
 
-// cart
-
-// let cart = [];
-
-// function toggleCartDrawer() {
-//   const drawer = document.getElementById("cartDrawer");
-//   const overlay = document.getElementById("drawerOverlay");
-//   drawer.classList.toggle("open");
-//   overlay.classList.toggle("show");
-// }
-
-// function addToCart(
-//   productName = "Helio Pet Device",
-//   price = 249,
-//   imageUrl = "https://i.ibb.co/2M8Q2Ct/helio.png"
-// ) {
-//   const existing = cart.find((item) => item.name === productName);
-//   if (existing) {
-//     existing.qty += 1;
-//   } else {
-//     cart.push({ name: productName, price: price, qty: 1, image: imageUrl });
-//   }
-
-//   updateCartDisplay();
-//   toggleCartDrawer(); // Automatically open the drawer
-// }
-
-// function updateCartDisplay() {
-//   const drawerContent = document.getElementById("drawerContent");
-//   const cartCount = document.getElementById("cartCount");
-//   const cartTotal = document.getElementById("cartTotal");
-
-//   drawerContent.innerHTML = "";
-//   let total = 0;
-//   let count = 0;
-
-//   cart.forEach((item) => {
-//     const itemDiv = document.createElement("div");
-//     itemDiv.className = "item";
-//     itemDiv.innerHTML = `
-//       <img src="${item.image}" alt="${item.name}" class="cart-img" />
-//       <div class="item-details">
-//         <p>${item.name}</p>
-//         <p>${item.qty} × $${item.price}</p>
-//       </div>
-//       <div class="item-price">$${(item.price * item.qty).toFixed(2)}</div>
-//     `;
-//     drawerContent.appendChild(itemDiv);
-//     total += item.price * item.qty;
-//     count += item.qty;
-//   });
-
-//   cartTotal.textContent = total.toFixed(2);
-//   cartCount.textContent = count;
-// }
-
-// // Hook to button (make sure your "Add to Cart" button has class .add-to-cart)
-// document.querySelector(".add-to-cart").addEventListener("click", () => {
-//   addToCart(); // or pass custom product info here
-// });
-
 let cart = [];
 
 function toggleCartDrawer() {
@@ -164,7 +103,6 @@ function changeQty(index, delta) {
   updateCartDisplay();
 }
 
-
 function removeItem(index) {
   cart.splice(index, 1);
   updateCartDisplay();
@@ -173,3 +111,19 @@ function removeItem(index) {
 document.querySelector(".add-to-cart").addEventListener("click", () => {
   addToCart();
 });
+
+// navbar hamburger
+
+const hamburgerBtn = document.querySelector(".navbar-toggle");
+const mobileOverlay = document.getElementById("mobileNavOverlay");
+const closeBtn = document.getElementById("mobileCloseBtn");
+
+if (hamburgerBtn && mobileOverlay && closeBtn) {
+  hamburgerBtn.addEventListener("click", () => {
+    mobileOverlay.classList.add("show-mobile-nav");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileOverlay.classList.remove("show-mobile-nav");
+  });
+}
